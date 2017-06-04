@@ -8,7 +8,7 @@ function getRandomImage(imgAr, path) {
      path = path || "assets/img/"; // default path here
      var num = Math.floor(Math.random() * imgAr.length);
      var img = imgAr[num];
-     var imgStr = '<img src="' + path + img + '" id="" class="face" alt="carte'+img+'"/>';
+     var imgStr = '<img src="' + path + img + '" id="0" class="face" alt="carte'+img+'"/>';
      is[num] = 1;
      document.write(imgStr);
      document.close();
@@ -17,7 +17,7 @@ function getRandomImage(imgAr, path) {
                var num = Math.floor(Math.random() * imgAr.length);
           }
           var img = imgAr[num];
-          var imgStr = '<img src="' + path + img + '" class="face" id="" alt= "carte'+img+'"/>';
+          var imgStr = '<img src="' + path + img + '" class="face" id="'+i+'" alt= "carte'+img+'"/>';
           is[num] = 1;
           document.write(imgStr);
           document.close();
