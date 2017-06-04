@@ -3,12 +3,14 @@ var is = new Array(32);
 for (var n = 1; n <= 32; n++) {
 	is[n] = 0
 }
+var nbCartes = 0;
+var cartesRet = Array(6);
 
 function getRandomImage(imgAr, path) {
 	path = path || "assets/img/"; // default path here
 	var num = Math.floor(Math.random() * imgAr.length);
 	var img = imgAr[num];
-	var imgStr = '<img src="' + path + img + '" id="0" class="face" alt="carte' + img + '"/>';
+	var imgStr = '<img src="' + path + img + '" onclick="ret(this);"id="' + num + '" class="face" alt="' + img + '"/>';
 	is[num] = 1;
 	document.write(imgStr);
 	document.close();
@@ -17,7 +19,7 @@ function getRandomImage(imgAr, path) {
 			var num = Math.floor(Math.random() * imgAr.length);
 		}
 		var img = imgAr[num];
-		var imgStr = '<img src="' + path + img + '" class="face" id="' + i + '" alt= "carte' + img + '"/>';
+		var imgStr = '<img src="' + path + img + '"onclick="ret(this);" class="face" id="' + num + '" alt= "' + img + '"/>';
 		is[num] = 1;
 		document.write(imgStr);
 		document.close();
@@ -29,6 +31,26 @@ function dos() {
 		var imgStr = '<img src="' + "assets/img/dos.jpg" + '" class="dos" id="" onclick="retourne();" alt = ""/>';
 		document.write(imgStr);
 		document.close();
+	}
+
+}
+
+function ret(it) {
+	if(1){
+	it.style.opacity = 1;
+	cartesRet[nbCartes] = it.id;
+	it.onclick = "";
+	
+		
+		nbCartes = 0;
+
+			it.display.opacity=0;
+			
+	
+		nbCartes = nbCartes + 1;
+
+	alert(nbCartes);
+
 	}
 
 }

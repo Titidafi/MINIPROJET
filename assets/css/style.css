@@ -62,6 +62,7 @@ body {
     width:90px;
     padding-left: 15px;
     padding-right: 15px;
+	opacity:0;
 }
 
 #cartesdos {
@@ -85,4 +86,10 @@ ul li {
 h1 {
     font-family:"titre";
     
+}
+hidden{
+	opacity: 0;
+}
+show{
+	opacity: 1;
 }
