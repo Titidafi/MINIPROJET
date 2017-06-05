@@ -8,11 +8,6 @@ body {
 }
 
 @font-face {
-    font-family:'texte';
-    src: url(../fonts/Comfortaa-Regular.ttf);
-}
-
-@font-face {
     font-family:'titre';
     src: url(../fonts/Comfortaa-Bold.ttf);
 }
